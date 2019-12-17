@@ -9,8 +9,8 @@ function createFareMultiplier(rate) {
     return (fare) => (fare*rate)
 }
 
-const fareDoubler = (fare) => (createFareMultiplier(2)(fare));
+const fareDoubler = createFareMultiplier(2);
 
-const fareTripler = (fare) => (createFareMultiplier(3)(fare));
+const fareTripler = createFareMultiplier(3);
 
 const selectDifferentDrivers = (drivers, firstOrLast) => (firstOrLast(drivers));
